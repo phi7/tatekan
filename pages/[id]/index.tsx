@@ -24,7 +24,7 @@ export const getServerSideProps = async (
 };
 
 const Page = ({ id }: Props) => {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "";
+  const baseUrl = process.env.NEXT_PUBLIC_WEB_URL ?? "";
   return (
     <>
       <Head>
