@@ -6,7 +6,7 @@ import TwitterShareButton from "../components/TwitterShareButton";
 
 export default function Home() {
   const [body, setBody] = useState("h");
-  const ogpImageUrl = `${process.env.NEXT_PUBLIC_WEB_URL}?id=${body}/ogp`;
+  const ogpImageUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/api/ogp?id=${body}/ogp`;
 
   return (
     <div className={styles.container}>
