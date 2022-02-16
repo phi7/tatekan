@@ -10,7 +10,7 @@ export default function TwitterShareButton(props: Props) {
     props.url
   )}&text=${encodeURIComponent(
     props.text
-  )}&hashtags=たてかんメーカー&hashtags=京大`;
+  )}&hashtags=たてかんメーカー&hashtags=京 大`;
 
   return (
     <a
