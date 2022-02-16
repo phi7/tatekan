@@ -8,9 +8,7 @@ export default function TwitterShareButton(props: Props) {
   //引数はpros.urlとprops.text
   const url = `https://twitter.com/share?url=${encodeURIComponent(
     props.url
-  )}&text=${encodeURIComponent(
-    props.text
-  )}&hashtags=たてかんメーカー&hashtags=京 大`;
+  )}?id=${props.text}&hashtags=たてかんメーカー&hashtags=京大`;
 
   return (
     <a

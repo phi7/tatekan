@@ -5,40 +5,8 @@ import { FormEvent, useEffect, useState } from "react";
 import TwitterShareButton from "../components/TwitterShareButton";
 
 export default function Home() {
-  const [body, setBody] = useState("");
-  const ogpImageUrl = `${
-    process.env.NEXT_PUBLIC_WEB_URL
-  }&text=${encodeURIComponent(body)}/ogp`;
-  //送信するための関数
-  // async function onSubmit(e: FormEvent<HTMLFormElement>) {
-  //   e.preventDefault();
-
-  //   // const db = getFirestore();
-
-  //   //誤連打を防ぐ．
-  //   // setIsSending(true);
-
-  //   // await addDoc(collection(db, "questions"), {
-  //   //   senderUid: currentUser.uid,
-  //   //   receiverUid: user.uid,
-  //   //   body,
-  //   //   isReplied: false,
-  //   //   createdAt: serverTimestamp(),
-  //   // });
-
-  //   // setIsSending(false);
-
-  //   // setBody("");
-  //   // toast.success("質問を送信しました。", {
-  //   //   position: "bottom-left",
-  //   //   autoClose: 5000,
-  //   //   hideProgressBar: false,
-  //   //   closeOnClick: true,
-  //   //   pauseOnHover: true,
-  //   //   draggable: true,
-  //   //   progress: undefined,
-  //   // });
-  // }
+  const [body, setBody] = useState("h");
+  const ogpImageUrl = `${process.env.NEXT_PUBLIC_WEB_URL}?id=${body}/ogp`;
 
   return (
     <div className={styles.container}>
@@ -69,7 +37,7 @@ export default function Home() {
           required
         ></textarea>
         <TwitterShareButton
-          url={`${process.env.NEXT_PUBLIC_WEB_URL}`}
+          url={`${process.env.NEXT_PUBLIC_WEB_URL}/`}
           text={body}
         ></TwitterShareButton>
       </main>
