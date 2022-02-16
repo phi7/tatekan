@@ -43,6 +43,7 @@ const Page = ({ id }: Props) => {
           key="twitterImage"
           content={`${baseUrl}/api/ogp?id=${id}`}
         />
+        <meta property="og:title" content="OGPのタイトル" />
       </Head>
       <div>
         <h1>入力した文字: {id}</h1>
