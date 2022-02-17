@@ -10,7 +10,7 @@ export default function Home() {
   const [body, setBody] = useState("");
   const title = "たてかんメーカー";
   const description = "たてかんを簡単に作れます！";
-  const ogpImageUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/images/card.png`;
+  const ogpImageUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/images/apple-touch-icon.png`;
 
   return (
     <Layout>
