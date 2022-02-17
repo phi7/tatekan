@@ -39,6 +39,19 @@ export default function Home() {
             <h1 className={styles.title}>
               ようこそ<a>たてかんメーカーへ！</a>
             </h1>
+            <div>
+              ※Twitterに投稿したときに Nikkyou Sans
+              Font（共産党っぽいフォント）に変わります．ただし，Nikkyou Sans
+              Fontに収録されていない漢字は文字化けします．使える文字については以下URL参照．
+            </div>
+            <a
+              className="kyosan"
+              href="https://www.fontspace.com/nikkyou-sans-font-f31053#action=charmap&id=mLKax"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Nikkyou Sans Fontで使える文字
+            </a>
             <div className="row justify-content-center mb-3">
               {/* <div className="col-12 col-md-6"> */}
               <textarea

@@ -43,8 +43,8 @@ export default function Layout({ children }) {
       <footer className="text-center mt-5 py-5 bg-light">
         <div className="pb-1 text-muted">
           Created by{" "}
-          <a href="https://twitter.com/7x7x7__343" className="link-info">
-            @7x7x7__343
+          <a href="https://twitter.com/web5_" className="link-info">
+            @web5_
           </a>
         </div>
       </footer>
