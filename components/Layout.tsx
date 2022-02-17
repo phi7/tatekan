@@ -3,13 +3,13 @@ import Link from "next/link";
 // import { ToastContainer } from "react-toastify";
 
 export default function Layout({ children }) {
-  const title = "たてかんメーカー";
-  const description = "たてかんを簡単に作れます！";
-  const ogpImageUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/images/card.png`;
+  //   const title = "たてかんメーカー";
+  //   const description = "たてかんを簡単に作れます！";
+  //   const ogpImageUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/images/card.png`;
 
   return (
     <div>
-      <Head>
+      {/* <Head>
         <title>{title}</title>
         <meta property="og:image" key="ogImage" content={ogpImageUrl} />
         <meta name="twitter:card" key="twitterCard" content="summary" />
@@ -26,7 +26,7 @@ export default function Layout({ children }) {
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet"
         ></link>
-      </Head>
+      </Head> */}
       <nav
         className="navbar navbar-expand-lg navbar-light mb-3"
         style={{ backgroundColor: "#e3f2fd" }}
