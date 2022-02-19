@@ -39,11 +39,11 @@ export default function Home() {
             <h1 className={styles.title}>
               ようこそ<a>たてかんメーカーへ！</a>
             </h1>
-            <div>
+            {/* <div>
               ※Twitterに投稿したときに Nikkyou Sans
               Font（共産党っぽいフォント）に変わります．ただし，Nikkyou Sans
               Fontに収録されていない漢字は文字化けします．使える文字については以下URL参照．
-            </div>
+            </div> */}
             <a
               className="kyosan"
               href="https://www.fontspace.com/nikkyou-sans-font-f31053#action=charmap&id=mLKax"
@@ -73,24 +73,6 @@ export default function Home() {
             </Link>
           </main>
         </div>
-
-        {/* <footer className={styles.footer}>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by{" "}
-            <span className={styles.logo}>
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                width={72}
-                height={16}
-              />
-            </span>
-          </a>
-        </footer> */}
       </div>
     </Layout>
   );

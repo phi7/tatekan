@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { GetServerSidePropsContext, GetServerSidePropsResult } from "next";
 import Head from "next/head";
 import TwitterShareButton from "../../components/TwitterShareButton";
@@ -29,6 +29,8 @@ export const getServerSideProps = async (
 
 const Page = ({ id }: Props) => {
   const baseUrl = process.env.NEXT_PUBLIC_WEB_URL ?? "";
+  const [body, setBody] = useState("");
+  const id_for_url = encodeURIComponent(id);
   return (
     <Layout>
       <>
@@ -61,7 +63,7 @@ const Page = ({ id }: Props) => {
             <div className="my-3 d-flex justify-content-center">
               <TwitterShareButton
                 url={`${process.env.NEXT_PUBLIC_WEB_URL}/`}
-                text={id}
+                text={id_for_url}
               ></TwitterShareButton>
             </div>
             <div className="my-3 d-flex justify-content-center">

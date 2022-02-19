@@ -6,9 +6,10 @@ type Props = {
 
 export default function TwitterShareButton(props: Props) {
   //引数はpros.urlとprops.text
-  const url = `https://twitter.com/share?url=${encodeURIComponent(props.url)}${
-    props.text
-  }&hashtags=たてかんメーカー&hashtags=京大`;
+  const preurl = `${props.url}` + `${props.text}`;
+  console.log(preurl);
+  //console.log(encodeURIComponent(preurl));
+  const url = `https://twitter.com/share?url=${preurl}&hashtags=たてかんメーカー&hashtags=百万遍`;
 
   return (
     <a

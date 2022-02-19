@@ -3,30 +3,8 @@ import Link from "next/link";
 // import { ToastContainer } from "react-toastify";
 
 export default function Layout({ children }) {
-  //   const title = "たてかんメーカー";
-  //   const description = "たてかんを簡単に作れます！";
-  //   const ogpImageUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/images/card.png`;
-
   return (
     <div>
-      {/* <Head>
-        <title>{title}</title>
-        <meta property="og:image" key="ogImage" content={ogpImageUrl} />
-        <meta name="twitter:card" key="twitterCard" content="summary" />
-        <meta name="twitter:image" key="twitterImage" content={ogpImageUrl} />
-        <meta name="description" key="description" content={description} />
-        <meta property="og:title" key="ogTItle" content={title} />
-        <meta property="og:site_name" key="ogSiteName" content={title} />
-        <meta
-          property="og:description"
-          key="ogDescription"
-          content={description}
-        />
-        <link
-          href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet"
-        ></link>
-      </Head> */}
       <nav
         className="navbar navbar-expand-lg navbar-light mb-3"
         style={{ backgroundColor: "#e3f2fd" }}
