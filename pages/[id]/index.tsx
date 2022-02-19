@@ -29,8 +29,8 @@ export const getServerSideProps = async (
 
 const Page = ({ id }: Props) => {
   const baseUrl = process.env.NEXT_PUBLIC_WEB_URL ?? "";
-  const [body, setBody] = useState("");
-  const id_for_url = encodeURIComponent(id);
+  // const [body, setBody] = useState("");
+  // const id_for_url = encodeURIComponent(id);
   return (
     <Layout>
       <>
@@ -58,7 +58,7 @@ const Page = ({ id }: Props) => {
               ようこそ<a>たてかんメーカーへ！</a>
             </h1>
             <div className="row justify-content-center mb-3">
-              <CanvasBoard text={id}></CanvasBoard>
+              {/* <CanvasBoard text={id}></CanvasBoard> */}
             </div>
             <div className="my-3 d-flex justify-content-center">
               <TwitterShareButton

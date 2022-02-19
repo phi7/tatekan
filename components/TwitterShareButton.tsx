@@ -9,7 +9,7 @@ export default function TwitterShareButton(props: Props) {
   const preurl = `${props.url}` + `${encodeURIComponent(props.text)}`;
   console.log(preurl);
   //console.log(encodeURIComponent(preurl));
-  const url = `https://twitter.com/intent/tweet?url=${encodeURIComponent(
+  const url = `https://twitter.com/share?url=${encodeURIComponent(
     preurl
   )}&hashtags=たてかんメーカー&hashtags=百万遍`;
 
