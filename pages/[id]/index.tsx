@@ -63,7 +63,7 @@ const Page = ({ id }: Props) => {
             <div className="my-3 d-flex justify-content-center">
               <TwitterShareButton
                 url={`${process.env.NEXT_PUBLIC_WEB_URL}/`}
-                text={id_for_url}
+                text={id}
               ></TwitterShareButton>
             </div>
             <div className="my-3 d-flex justify-content-center">
