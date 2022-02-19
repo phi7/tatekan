@@ -18,11 +18,17 @@ export default function Home() {
 
   async function setCanvas(textAreaText: string) {
     setBody(textAreaText);
+
     const res = await fetch(
       process.env.NEXT_PUBLIC_WEB_URL + `/api/${textAreaText}`
     );
-    const text = await res.text();
-    const text2 = JSON.parse(text);
+    console.log("hoge4");
+    const json = await res.json();
+    console.log(json);
+    const pngURL = json["url"];
+    console.log(pngURL);
+    //const text = await res.text();
+    //const text2 = JSON.parse(text);
     //setPng(text);
     // console.log("hoge1");
     // console.log(res);
@@ -30,7 +36,8 @@ export default function Home() {
     // console.log(text);
     // console.log(text2.url);
     // console.log("hoge1");
-    setPng(text2.url);
+    //setPng(text2.url);
+    setPng(pngURL);
   }
 
   return (

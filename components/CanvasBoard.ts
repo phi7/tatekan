@@ -15,7 +15,7 @@ const height = 315 as const;
 // });
 
 export default function CanvasBoard(text2: string) {
-  const [png, setPng] = useState<string | null>(null);
+  const [png, setPng] = useState("");
 
   useEffect(() => {
     const canvasElem = document.createElement("canvas");
