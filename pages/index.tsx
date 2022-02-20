@@ -27,18 +27,19 @@ export default function Home() {
     console.log(json);
     const pngURL = json["url"];
     console.log(pngURL);
-    //const text = await res.text();
-    //const text2 = JSON.parse(text);
-    //setPng(text);
-    // console.log("hoge1");
-    // console.log(res);
-    //console.log(res.json());
-    // console.log(text);
-    // console.log(text2.url);
-    // console.log("hoge1");
-    //setPng(text2.url);
     setPng(pngURL);
   }
+
+  //const text = await res.text();
+  //const text2 = JSON.parse(text);
+  //setPng(text);
+  // console.log("hoge1");
+  // console.log(res);
+  //console.log(res.json());
+  // console.log(text);
+  // console.log(text2.url);
+  // console.log("hoge1");
+  //setPng(text2.url);
 
   return (
     <Layout>
@@ -67,11 +68,10 @@ export default function Home() {
             <h1 className={styles.title}>
               ようこそ<a>たてかんメーカーへ！</a>
             </h1>
-            {/* <div>
-              ※Twitterに投稿したときに Nikkyou Sans
-              Font（共産党っぽいフォント）に変わります．ただし，Nikkyou Sans
+            <div>
+              ※Nikkyou Sans
               Fontに収録されていない漢字は文字化けします．使える文字については以下URL参照．
-            </div> */}
+            </div>
             <a
               className="kyosan"
               href="https://www.fontspace.com/nikkyou-sans-font-f31053#action=charmap&id=mLKax"
