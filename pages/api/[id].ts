@@ -9,7 +9,6 @@ import { NextApiRequest } from "next";
 
 const width = 600 as const;
 const height = 315 as const;
-var row_string_cnt = 20;
 
 const responseJson = async (req: NextApiRequest, res: NextApiResponse) => {
   //多分urlを分解してidのところをとってきている．どこでidを定義しているのだろうか？
