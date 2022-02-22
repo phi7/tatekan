@@ -38,19 +38,39 @@ import TwitterShareButton from "../../components/TwitterShareButton";
 import { GetServerSidePropsContext, GetServerSidePropsResult } from "next";
 
 const Page = ({ id }: Props) => {
-  const [body, setBody] = useState(id);
+  var idLst = id.split("");
+  var text = "";
+  for (var i = 0; i < idLst.length; i++) {
+    if (idLst[i] != "*") {
+      text += idLst[i];
+    }
+  }
+  console.log(text);
+  const [body, setBody] = useState(text);
   const title = "たてかんメーカー";
   const description = "たてかんを簡単に作れます！";
   // const ogpImageUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/images/apple-touch-icon.png`;
+  //次の投稿のためのogpになる．setし直しても意味はない．意味があるのは最初の一回だけ
   const [ogpImageUrl, setOgpImageUrl] = useState(
     `${process.env.NEXT_PUBLIC_WEB_URL}/api/ogp?id=${id}`
   );
   const [textArea3, settextArea3] = useState(id);
   const [ogpSize, setOgpSize] = useState("summary_large_image");
   // const [png, setPng] = useState<string | null>(null);
+
   const [png, setPng] = useState(
     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAE7CAYAAAAB7v+1AAAABmJLR0QA/wD/AP+gvaeTAAAFqElEQVR4nO3WwQkAIBDAsNP9d9YlCoIkE/TZdWbOAACQ2a8DAAB+Y7AAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIGCwAgZrAAAGIXk0UEdP06U4gAAAAASUVORK5CYII="
   );
+
+  async function setInitPng(id: string) {
+    const res = await fetch(process.env.NEXT_PUBLIC_WEB_URL + `/api/${id}`);
+    //レスポンスをjsonファイルにして，その中からurlを取り出す．
+    const json = await res.json();
+    const pngURL = json["url"] as string;
+    //return pngURL;
+    setPng(pngURL);
+  }
+  setInitPng(id);
 
   async function setCanvas(textAreaText: string) {
     setBody(textAreaText);
@@ -94,17 +114,6 @@ const Page = ({ id }: Props) => {
     }
   }
 
-  //const text = await res.text();
-  //const text2 = JSON.parse(text);
-  //setPng(text);
-  // console.log("hoge1");
-  // console.log(res);
-  //console.log(res.json());
-  // console.log(text);
-  // console.log(text2.url);
-  // console.log("hoge1");
-  //setPng(text2.url);
-
   return (
     <Layout>
       <Head>
@@ -128,10 +137,6 @@ const Page = ({ id }: Props) => {
 
       <div className="row justify-content-center">
         <div className="col-12 col-md-6">
-          {/* <main className={styles.main}> */}
-          {/* <h1 className={styles.title}>
-                ようこそ<a>たてかんメーカーへ！</a>
-              </h1> */}
           <div>
             ※Nikkyou Sans
             Fontに収録されていない漢字は文字化けします．使える文字については次のURL参照．
@@ -157,19 +162,8 @@ const Page = ({ id }: Props) => {
               required
             ></textarea>
             <div className="m-3">
-              {/* <div> */}
               <img src={png} className="img-fluid" />
-              {/* <CanvasBoard text={body}></CanvasBoard> */}
-              {/* </div> */}
-              {/* </div> */}
-              {/* </div> */}
             </div>
-
-            {/* <div className="my-3 d-flex justify-content-center">
-              <Link href={`/${body}`}>
-                <a className="tatekan-button">たてかんを作成する</a>
-              </Link>
-            </div> */}
             <div className="my-3 d-flex justify-content-center">
               <TwitterShareButton
                 url={`${process.env.NEXT_PUBLIC_WEB_URL}/`}
