@@ -17,6 +17,11 @@ export default function Layout({ children }) {
           </div>
         </div>
       </nav>
+      {/* <img
+        src="https://kyoto-np.ismcdn.jp/mwimgs/a/d/320mw/img_ad2a7409f955348b86ff63fcaf45cfe71204455.jpg"
+        className="img-fluid"
+        alt="..."
+      ></img> */}
       <div className="container">{children}</div>
       <footer className="text-center mt-5 py-5 bg-light">
         <div className="pb-1 text-muted">

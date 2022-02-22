@@ -156,6 +156,13 @@ const Page = ({ id }: Props) => {
               Nikkyou Sans Fontで使える文字
             </a>
           </div>
+          <div>
+            実装が下手なため，たまに文字が上手く消去できません．コードレビューしてくれる人募集中→
+            <a href="https://twitter.com/web5_" className="link-info">
+              @web5_
+            </a>
+            のDMへ！
+          </div>
 
           <section className="text-center mt-4">
             {/* <div className="row justify-content-center mb-3"> */}
