@@ -80,7 +80,7 @@ export default function Home() {
       <Head>
         <title>{title}</title>
         <meta property="og:image" key="ogImage" content={ogpImageUrl} />
-        <meta name="twitter:card" key="twitterCard" content={ogpSize} />
+        <meta name="twitter:card" key="twitterCard" content="summary" />
         <meta name="twitter:image" key="twitterImage" content={ogpImageUrl} />
         <meta name="description" key="description" content={description} />
         <meta property="og:title" key="ogTItle" content={title} />
