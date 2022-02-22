@@ -6,8 +6,8 @@ type Props = {
 
 export default function TwitterShareButton(props: Props) {
   //引数はpros.urlとprops.text
-  // const preurl = `${props.url}` + `${encodeURIComponent(props.text)}`;
-  const preurl = `${props.url}`;
+  const preurl = `${props.url}` + `${encodeURIComponent(props.text)}`;
+  //const preurl = `${props.url}`;
   console.log(preurl);
   //console.log(encodeURIComponent(preurl));
   const url = `https://twitter.com/share?url=${encodeURIComponent(
