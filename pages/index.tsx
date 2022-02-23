@@ -9,7 +9,7 @@ import TwitterShareButton from "../components/TwitterShareButton";
 
 export default function Home() {
   const [body, setBody] = useState("");
-  const title = "たてかんメーカー";
+  const title = "たてかんメーカー　たてかんを作ろう！";
   const description = "たてかんを簡単に作れます！";
   // const ogpImageUrl = `${process.env.NEXT_PUBLIC_WEB_URL}/images/apple-touch-icon.png`;
   const [ogpImageUrl, setOgpImageUrl] = useState(
