@@ -12,7 +12,7 @@ const height = 315 as const;
 
 const responseJson = async (req: NextApiRequest, res: NextApiResponse) => {
   //多分urlを分解してidのところをとってきている．どこでidを定義しているのだろうか？
-  var id = req.query.id as string;
+  const id = req.query.id as string;
   console.log(id);
 
   registerFont(path.resolve("./fonts/NikkyouSans-mLKax.ttf"), {
@@ -30,7 +30,7 @@ const responseJson = async (req: NextApiRequest, res: NextApiResponse) => {
   ctx.fillStyle = "red";
   //背景を描写
   ctx.fillRect(0, 0, WIDTH, HEIGHT);
-  var font_size = 45;
+  const font_size = 45;
   //フォントを指定
   ctx.font = font_size + "px NikkyouSans-mLKax";
   //文字の色を指定
@@ -40,13 +40,13 @@ const responseJson = async (req: NextApiRequest, res: NextApiResponse) => {
   ctx.textBaseline = "middle";
 
   //テキストを1文字ずつ分割し，配列に
-  var idAry = id.split("");
+  let idAry = id.split("");
   //*とそれ以外でわけた配列をつくるための空の配列
-  var idAry2 = [];
+  let idAry2 = [];
   //わけた配列を実装するための「それ以外」の部分
-  var senten = "";
+  let senten = "";
   //アスタリスクの数をカウントする．あとで使う
-  var astCnt = 0;
+  let astCnt = 0;
   //*とそれ以外でわけた配列をつくる
   for (var i = 0; i < idAry.length; i++) {
     if (idAry[i] == "*") {
@@ -62,7 +62,7 @@ const responseJson = async (req: NextApiRequest, res: NextApiResponse) => {
   idAry2.push(senten);
 
   //行ごとに描写しながら，astCntを使って中央寄せをしている．
-  var gyosu = 0;
+  let gyosu = 0;
   for (var i = 0; i < idAry2.length; i++) {
     var text = idAry2[i];
     //console.log(text);
